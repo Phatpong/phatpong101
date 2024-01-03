@@ -1,9 +1,11 @@
-import { ThemeProvider } from "@/components/providers/theme-provider";
 import type { Metadata } from "next";
+import { NextIntlClientProvider, useMessages } from "next-intl";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import { ReactNode } from "react";
 import "../globals.css";
+
+import { ThemeProvider } from "@/components/providers/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +24,10 @@ type LocaleLayout = {
 };
 
 const LocaleLayout = ({ children, params: { locale } }: LocaleLayout) => {
+	const messages = useMessages();
+
 	if (!locales.includes(locale as any)) notFound();
+
 	return (
 		<html lang={locale}>
 			<body className={inter.className}>
@@ -31,7 +36,11 @@ const LocaleLayout = ({ children, params: { locale } }: LocaleLayout) => {
 					defaultTheme="system"
 					enableSystem
 					disableTransitionOnChange>
-					{children}
+					<NextIntlClientProvider
+						locale={locale}
+						messages={messages}>
+						{children}
+					</NextIntlClientProvider>
 				</ThemeProvider>
 			</body>
 		</html>

@@ -1,3 +1,16 @@
 {
-	"homepage": "หน้าแรก"
+	"components": "ส่วนประกอบ",
+	"dark": "มืด",
+	"examples": "ตัวอย่าง",
+	"github": "Github",
+	"homepage": "หน้าแรก",
+	"light": "แสงสว่าง",
+	"no result found": "ไม่พบผลลัพธ์",
+	"main navigation": "การนำทางหลัก",
+	"profile": "โปรไฟล์",
+	"search": "ค้นหา",
+	"search documentation": "ค้นหา เอกสาร",
+	"system": "ระบบ",
+	"theme": "ธีม",
+	"type a command or search": "พิมคำสั่งหรือค้นหา"
 }
