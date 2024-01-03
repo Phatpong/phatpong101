@@ -1,3 +1,16 @@
 {
-	"homepage": "Homepage"
+	"components": "Components",
+	"dark": "Dark",
+	"examples": "Examples",
+	"github": "Github",
+	"homepage": "Homepage",
+	"light": "Light",
+	"no result found": "No result found",
+	"main navigation": "Main navigation",
+	"profile": "Profile",
+	"search": "Search",
+	"search documentation": "Search documentation",
+	"system": "System",
+	"theme": "Theme",
+	"type a command or search": "Type a command or search"
 }
